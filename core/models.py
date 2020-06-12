@@ -9,9 +9,14 @@ class Evento(models.Model):
     data_criacao = models.DateTimeField(auto_now=True)
     usuario = models.ForeignKey(User, on_delete=models.CASCADE)
 
-    #dando o nome para a tabela como evento
     class Meta:
-        db_table ='evento'
+        db_table = 'evento'
+
+    def __str__(self):
+        return self.titulo
+
+
+
 
 
 
